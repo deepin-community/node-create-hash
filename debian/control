@@ -1,0 +1,44 @@
+Source: node-create-hash
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Bastien Roucariès <rouca@debian.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-cipher-base <!nocheck>
+ , node-hash-test-vectors <!nocheck>
+ , node-inherits <!nocheck>
+ , node-md5.js <!nocheck>
+ , node-ripemd160 <!nocheck>
+ , node-safe-buffer <!nocheck>
+ , node-sha.js <!nocheck>
+ , node-tape <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-create-hash
+Vcs-Git: https://salsa.debian.org/js-team/node-create-hash.git
+Homepage: https://github.com/crypto-browserify/createHash
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-create-hash
+Architecture: all
+Depends: ${misc:Depends}
+ , node-cipher-base
+ , node-inherits
+ , node-md5.js
+ , node-ripemd160
+ , node-sha.js
+Description: create hashes for browserify
+ This package allow one to create hash in browser context using
+ Node.js API.
+ .
+ A hash function is any function that can be used to map data
+ of arbitrary size to data of fixed  size.
+ Hash functions are related to checksums, check digits,
+ fingerprints, lossy compression, randomization functions,
+ error-correcting codes, and ciphers.
+ Although these concepts overlap to some extent, each has
+ its own uses and   requirements and is designed and optimized
+ differently.
+ .
+ Node.js is an event-based server-side JavaScript engine.
